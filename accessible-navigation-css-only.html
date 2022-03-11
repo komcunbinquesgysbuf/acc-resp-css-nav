@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            * { margin: 0; padding: 0 }
+            body { margin: 0 1rem }
+            header, main, footer { margin: 1rem 0 }
+            blockquote, dl, figure, hr, menu, ol, p, pre, table, ul { margin: 1rem 0 }
+            nav > [href="#main"] { position: absolute; top: -2.5rem; left: 0; transition: top .4s ease; padding: .5rem 1rem; background-color: #fc9; border-bottom-right-radius: .5rem }
+            nav > [href="#main"]:focus { top: 0 }
+            nav > [href="#menu"] { display: flex; flex-flow: column; justify-content: space-between; font-size: 0; width: 1rem; height: 1rem; transition: all .4s ease }
+            nav > [href="#menu"]:before, [href="#menu"] > span, [href="#menu"]:after { content: ""; padding: .2rem 0 0 0; background-color: #000; border-radius: .2rem }
+            nav > [href="#menu"]:before { border-top-left-radius: .5rem; border-top-right-radius: .5rem }
+            nav > [href="#menu"]:after { border-bottom-left-radius: .5rem; border-bottom-right-radius: .5rem }
+            nav > menu > li { list-style: none; margin: 0 1rem .2rem 0; padding: .2rem .5rem }
+            @supports selector(:focus-within) {
+                nav > menu { position: relative; left: -10rem; max-height: 0; margin: 0; transition: all .4s ease }
+                nav:focus-within > menu { left: 0; margin: 1rem 0; max-height: 12rem }
+                nav:focus-within > menu > li { background-color: #cf9 }
+            }
+            @media only screen and (min-width: 50rem) {
+                nav > [href="#menu"] { position: absolute; top: -2.5rem }
+                nav > menu { left: 0; max-height: 10rem; margin: 1rem 0; display: flex }
+                nav > menu > li { background-color: #cf9 }
+                nav > [href="#main"]:focus ~ menu { left: 8rem }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="#main">skip to content</a>
+                <a href="#menu"><span>skip to menu</span></a>
+                <menu>
+                    <li><a href="?a">consectetur</a></li>
+                    <li><a href="?b">dictum</a></li>
+                    <li><a href="?c">Pellentesque</a></li>
+                    <li><a href="?d">interdum</a></li>
+                    <li><a href="?e">ullamcorper</a></li>
+                    <li><a href="?f">accumsan</a></li>
+                    <li><a href="?g">Cras</a></li>
+                </menu>
+            </nav>
+        </header>
+        <main id="main">
+            <h1>This is the content</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc massa magna, malesuada a tristique id, placerat sit amet nunc. Suspendisse dictum suscipit egestas. Aenean condimentum eu nunc eget bibendum. Nam molestie ante id elit egestas iaculis. Vestibulum tincidunt mollis placerat. Donec quis laoreet felis. Nullam tincidunt iaculis pellentesque. Phasellus molestie scelerisque lacinia. Vivamus id massa metus.</p>
+            <p>Morbi varius mollis maximus. Sed dictum vel leo sed egestas. Donec euismod pulvinar ligula, sit amet tempor metus consequat ut. Morbi lobortis sit amet neque at efficitur. Donec tristique, neque eget sollicitudin feugiat, lectus mauris vestibulum neque, quis imperdiet nibh dui id felis. Fusce imperdiet lectus sit amet ante volutpat varius. Nullam id mollis nulla. Morbi rhoncus cursus neque a elementum. Donec interdum tellus a efficitur laoreet. Donec id semper elit. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+            <p>Maecenas ac tempor nisi, et porttitor orci. Pellentesque rhoncus ornare fringilla. Nullam enim orci, efficitur eu nisl ut, fermentum rutrum augue. Suspendisse condimentum eget felis eu dapibus. Vestibulum cursus posuere laoreet. Suspendisse venenatis, ligula quis iaculis imperdiet, metus libero gravida justo, vitae auctor leo mi et lorem. Nulla vestibulum metus at finibus commodo. Vestibulum tincidunt urna sit amet eros suscipit molestie. Curabitur finibus, sapien in laoreet placerat, justo eros rutrum libero, faucibus cursus neque sapien at leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris vel diam viverra, scelerisque dui quis, hendrerit risus. Cras ut ullamcorper lorem. Duis id varius nisi. Phasellus posuere ex orci, id ultricies nulla tempus pretium.</p>
+            <p>Aliquam porttitor est vel interdum ullamcorper. Vestibulum in turpis eget mauris dignissim aliquam vulputate mattis massa. Phasellus blandit eros cursus, volutpat purus id, cursus ligula. Morbi mattis dapibus odio at porttitor. Curabitur vel consequat ante. Nulla fermentum quam sit amet egestas commodo. Quisque semper pretium viverra. Vivamus sed luctus metus. Morbi eget suscipit lacus, ut ultricies dui. Fusce lobortis volutpat urna, ut hendrerit ex ultrices in.</p>
+            <p>Integer et nulla commodo, sollicitudin eros et, accumsan erat. Cras eget velit mauris. Nullam id velit quis velit viverra auctor quis quis enim. Phasellus nisl tortor, tempus aliquet dui a, accumsan viverra dui. Vestibulum ac rutrum ante. Ut ullamcorper non justo ut ultricies. Duis eleifend dictum magna, a imperdiet mi pulvinar placerat. Fusce sit amet eros vulputate, porttitor nisl sit amet, pulvinar velit. Suspendisse ut porta ligula. Mauris erat turpis, condimentum sed nibh non, scelerisque gravida est. Nunc suscipit eget magna id egestas. Aenean in venenatis ante.</p>
+        </main>
+    </body>
+</html>
